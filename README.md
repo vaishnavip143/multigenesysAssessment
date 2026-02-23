@@ -1,16 +1,54 @@
-# React + Vite
+# Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based application to manage employees and countries, built as a technical assignment.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **React**: Latest version (Vite)
+- **State Management**: Redux Toolkit (Slices, AsyncThunks)
+- **Forms**: React Hook Form
+- **UI Library**: Material-UI (MUI)
+- **HTTP Client**: Axios
+- **Testing**: Jest + React Testing Library
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+1. **Employee List**: Displays a table of employees with readable country names.
+2. **Search by ID**: Find specific employees using their ID.
+3. **Add/Edit Employee**: Dynamic form for creating and updating employee records with validation.
+4. **Delete Employee**: Remove records with a confirmation prompt.
+5. **UI Feedback**: Integrated loading and error states for a better user experience.
 
-## React Compiler
+## Project Structure
+```text
+src/
+├── app/             # Redux Store configuration
+├── components/      # Dumb components (List, Form)
+├── feature/         # Redux Slices (State logic)
+├── pages/           # Smart components (Layout, Data fetching)
+├── services/        # Axios configuration
+└── ...
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup and Run
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js installed
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install`.
+
+### Run the App
+```bash
+npm run dev
+```
+
+### Run Tests
+```bash
+npm test
+```
+
+## Assumptions and Decisions
+- Used `Redux Toolkit` for clean and scalable state management.
+- Implemented `React Hook Form` for efficient form handling and validation.
+- Component architecture follows the Smart/Dumb pattern for better maintainability.
